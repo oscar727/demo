@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Datos registrados</title>
+
+  <link rel="stylesheet" href="datos.css">
+
+</head>
+
+<body>
+
+<h1>Contactos registrados</h1>
+
+<button id="cerrarSesion">
+  Cerrar sesión
+</button>
+
+<input 
+  type="text" 
+  id="buscador" 
+  placeholder="Buscar contacto..."
+  onkeyup="buscarContacto()"
+>
+
+<table>
+
+  <thead>
+
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Correo</th>
+      <th>Acciones</th>
+    </tr>
+
+  </thead>
+
+  <tbody id="tabla-contactos"></tbody>
+
+</table>
+
+<script src="datos.js"></script>
+
+</body>
+</html>
