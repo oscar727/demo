@@ -161,8 +161,4 @@ app.get('/productos', (req, res) => {
 });
 
 // INICIAR SERVIDOR
-app.listen(3000, () => {
-
-  console.log('Servidor corriendo en http://localhost:3000');
-
-});
+module.exports = app;
