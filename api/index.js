@@ -9,13 +9,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // CONEXIÓN A LA BASE DE DATOS
-const db = mysql.createPool({
- 
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'servonova'
-});
 
 
 
