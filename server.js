@@ -68,8 +68,8 @@ app.post('/contactos', (req, res) => {
       console.log(err);
       return res.send('Error al guardar');
     }
-
-    res.send('Contacto guardado correctamente');
+    res.redirect('https://oscar727.github.io/demo/');
+    // res.send('Contacto guardado correctamente');
 
   });
 
