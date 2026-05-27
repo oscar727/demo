@@ -40,11 +40,28 @@ window.addEventListener("load", mostrarScroll);
 
 /* MENU HAMBURGUESA */
 
+/* MENU HAMBURGUESA */
+
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("nav");
+const enlacesMenu = document.querySelectorAll("nav a");
 
 menuToggle.addEventListener("click", () => {
     nav.classList.toggle("active");
+});
+
+// Cerrar menú al tocar un enlace
+enlacesMenu.forEach(enlace => {
+    enlace.addEventListener("click", () => {
+        nav.classList.remove("active");
+    });
+});
+
+// Cerrar menú si toca fuera
+document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+        nav.classList.remove("active");
+    }
 });
 
 /* HEADER AL BAJAR */
