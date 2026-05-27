@@ -9,21 +9,21 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // CONEXIÓN A LA BASE DE DATOS
-const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'servonova'
-});
-
-
-
 // const db = mysql.createConnection({
-//   host: 'sql.freedb.tech',
-//   user: 'u_03Iajp',
-//   password: '8vOnp1bBTlQP',
-//   database: 'freedb_p8thIux0'
+//   host: 'localhost',
+//   user: 'root',
+//   password: '',
+//   database: 'servonova'
 // });
+
+
+
+const db = mysql.createConnection({
+  host: 'sql.freedb.tech',
+  user: 'u_03Iajp',
+  password: '8vOnp1bBTlQP',
+  database: 'freedb_p8thIux0'
+});
 
 db.connect(err => {
 
