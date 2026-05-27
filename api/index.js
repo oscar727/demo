@@ -9,7 +9,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // CONEXIÓN A LA BASE DE DATOS
-const db = mysql.createConnection({
+const db = mysql.createPool({
+ 
   host: 'localhost',
   user: 'root',
   password: '',
@@ -25,14 +26,14 @@ const db = mysql.createConnection({
 //   database: 'freedb_p8thIux0'
 // });
 
-db.connect(err => {
-
-  if (err) {
-    console.log('Error de conexión:', err);
-  } else {
-    console.log('Conectado a MySQL');
-  }
-
+const db = mysql.createPool({
+  host: 'sql.freedb.tech',
+  user: 'u_03Iajp',
+  password: '8vOnp1bBTlQP',
+  database: 'freedb_p8thIux0',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
 });
 
 // LOGIN
